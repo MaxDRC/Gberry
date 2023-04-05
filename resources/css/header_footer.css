@@ -1,0 +1,148 @@
+/* Réinitialisation des styles par défaut */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles pour l'en-tête */
+header {
+    background-color: #050529;
+    font-family: 'visby-regular', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+header nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+header .logo img {
+    width: 300px;
+    align-items: center;
+}
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+header nav ul li a {
+    color: #ff5757;
+    text-decoration: none;
+    padding: 20px;
+    margin: 30px;
+    font-size: 20px;
+    position: relative;
+}
+header nav ul li a:hover {
+    color: #38b6ff;
+
+}
+/* Media queries pour les écrans de petite taille */
+@media (min-width: 300px) and (max-width: 1140px) {
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding:2rem
+
+    }
+    header .logo img {
+        width: 150px;
+        margin: 10px;
+    }
+    header nav ul li a {
+        margin: 5px;
+        padding: 5px;
+        font-size: 16px;
+    }
+}
+@media (min-width: 300px) and (max-width: 640px)
+{
+    footer .container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        padding:5px;
+
+    }
+    footer .logo img {
+        width: 200px;
+    }
+    footer nav ul li a {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+    
+
+/* Styles pour le contenu */
+main {
+    padding: 1rem;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+p {
+    margin-bottom: 1rem;
+}
+
+/* Styles pour le pied de page */
+footer {
+    background-color: #050529;
+    font-family: 'visby-regular', sans-serif;
+    font-size: 1.2em;
+    font-size: 20px;
+    font-weight: bold;
+}
+footer nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+}
+.logo {
+    width: 300px;
+    border-radius: 20px;
+    margin: 0 auto; 
+    align-items: center;
+}
+footer nav ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 5px;
+}
+footer .container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+footer .container nav ul li a {
+    color: #ff5757;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+}
+footer nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+footer .container nav ul li a:hover {
+    color: #38b6ff;
+}
+footer .container ul li a {
+    align-items: center;
+    padding: 5px;
+    list-style: none;
+}
+nav ul li {
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+}

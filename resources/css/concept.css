@@ -1,0 +1,52 @@
+/* Centrer l'image */
+.photo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+/* Police de caractère par défaut */
+body {
+    font-family: 'visby-regular', sans-serif;
+    background-color: #f5e6c4;
+}
+/* Titre principal */
+h1 {
+    background-color: #FFAE42;
+    color: #050529;
+    font-family: 'aswatama', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 5px;
+    box-shadow:  0 0 0 5px #ff5757;
+}
+
+/* Sous-titres */
+h2,
+h3 {
+    color: #050529;
+    font-family: 'aswatama', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Paragraphe */
+p {
+    background-color: #FFAE42;
+    color: #050529;
+    font-family: 'VisbyBold', sans-serif;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 80%;
+    line-height: 1.5;
+    padding: 1rem;
+    box-shadow:  0 0 0 5px #ff5757;
+    border-radius: 5px;
+}
+
