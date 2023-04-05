@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ConceptController;
+use App\Http\Controllers\GalerieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,5 +32,6 @@ Route::middleware('auth')->group(function () {
 
 ///////////////////// BERRY SUNDAY //////////////////////
 Route::get('/concept', [ConceptController::class, 'index'])->name('concept.index');
-
+///////////////////// GALERIE PHOTO  //////////////////////
+Route::get('/galerie', [GalerieController::class, 'index'])->name('galerie.index');
 require __DIR__.'/auth.php';
