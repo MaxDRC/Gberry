@@ -33,7 +33,7 @@
                 </ul>
                 <ul>
                     <li>
-                        <a>Galerie Photos</a>
+                        <a href="{{route('galerie.index')}}">Galerie Photos</a>
                     </li>
                 </ul>
                 <ul>
