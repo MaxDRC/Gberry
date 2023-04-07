@@ -8,16 +8,39 @@
 
 /* Styles pour l'en-tête */
 header {
-    background-color: #050529;
+    background-color: #f5e6c4;
     font-family: 'visby-regular', sans-serif;
     font-size: 1.2em;
     font-weight: bold;
+}
+header .connect {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f5e6c4;
+    border: 2px solid #ff5757;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 5px;
+}
+header .connect a {
+    color: #38b6ff;
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+    margin: 5px;
+    padding: 5px;
+}
+header .connect a img {
+    width: 30px;
+    height: 30px;
+    border: none;
 }
 header nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
 }
 header .logo img {
     width: 300px;
@@ -30,14 +53,15 @@ header nav ul {
 header nav ul li a {
     color: #ff5757;
     text-decoration: none;
-    padding: 20px;
-    margin: 30px;
+    padding: 5px;
+    margin: 5px;
     font-size: 20px;
     position: relative;
 }
 header nav ul li a:hover {
     color: #38b6ff;
-
+    border: 3px solid #ff5757;
+    border-radius: 5px;
 }
 /* Media queries pour les écrans de petite taille */
 @media (min-width: 300px) and (max-width: 1140px) {
@@ -90,7 +114,7 @@ p {
 
 /* Styles pour le pied de page */
 footer {
-    background-color: #050529;
+    background-color:  #000000;
     font-family: 'visby-regular', sans-serif;
     font-size: 1.2em;
     font-size: 20px;
@@ -122,7 +146,7 @@ footer .container {
     list-style: none;
 }
 footer .container nav ul li a {
-    color: #ff5757;
+    color: #38b6ff;
     font-weight: bold;
     text-decoration: none;
     padding: 5px;
@@ -134,7 +158,7 @@ footer nav ul {
     list-style: none;
 }
 footer .container nav ul li a:hover {
-    color: #38b6ff;
+    color: #ff5757;
 }
 footer .container ul li a {
     align-items: center;
