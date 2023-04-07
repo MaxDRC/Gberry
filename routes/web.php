@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ConceptController;
 use App\Http\Controllers\GalerieController;
+use App\Http\Controllers\RejoindreController;
+use App\Http\Controllers\PartenairesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('acceuil');
 });
 
 Route::get('/dashboard', function () {
@@ -30,8 +32,17 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-///////////////////// BERRY SUNDAY //////////////////////
+                        ///////////////////// BERRY SUNDAY //////////////////////
 Route::get('/concept', [ConceptController::class, 'index'])->name('concept.index');
-///////////////////// GALERIE PHOTO  //////////////////////
+
+                        ///////////////////// GALERIE PHOTO  //////////////////////
 Route::get('/galerie', [GalerieController::class, 'index'])->name('galerie.index');
+
+                        ///////////////////// REJOIGNEZ-NOUS  //////////////////////
+Route::get('/rejoindre', [RejoindreController::class, 'index'])->name('rejoindre.index');
+
+                        ///////////////////// PARTENAIRES  //////////////////////
+Route::get('/partenaires', [PartenairesController::class, 'index'])->name('partenaires.index');
+
+
 require __DIR__.'/auth.php';

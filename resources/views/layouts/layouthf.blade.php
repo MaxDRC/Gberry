@@ -13,14 +13,13 @@
 
     </head>
     <body>
-        <header>
-                <img
-                    class="logo"
-                    src="{{ asset('logo.png') }}"
-                    alt="Logo"
-                    style="width: 100px; height: 100px;
-                    display: flex;">
+        <header> 
             <nav>
+                <ul>
+                    <li>
+                        <img src="{{ asset('logo.png') }}" alt="Logo" style="width: 100px; height: 100px;">
+                    </li>
+                </ul>
                 <ul>
                     <li>
                         <a href="/">Accueil</a>
@@ -38,14 +37,26 @@
                 </ul>
                 <ul>
                     <li>
-                        <a>Rejoignez-nous</a>
+                        <a href="{{route('rejoindre.index')}}">Rejoignez-nous</a>
                     </li>
                 </ul>
                 <ul>
                     <li>
-                        <a>Partenaires</a>
+                        <a href="{{route('partenaires.index')}}">Partenaires</a>
                     </li>
                 </ul>
+                @if (Route::has('login'))
+                <div class="connect">
+                    @auth
+                        <a href="{{ route('dashboard') }}">Tableau de bord</a>
+                        <a href="{{ route('logout') }}"><img src="{{ asset('img/deco.png') }}" alt="Logo"></a>
+                    @else
+                        <a href="{{ route('login') }}">Connexion / Inscription </a>
+
+                    @endauth
+                    
+                </div>
+            @endif
             </nav>
         </header>
         @yield('content')
