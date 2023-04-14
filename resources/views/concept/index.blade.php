@@ -1,6 +1,7 @@
 @extends('layouts.layouthf')
 
 @section('content')
+<title>Berry Sunday</title>
 @vite(['resources/css/concept.css', 'resources/js/app.js'])
  <h1>Berry Sunday c'est quoi ?  </h1>
  <img class="photo" src="img/berrysunday.jpg" alt="berrysunday" style="width: 75%; heigth: 100%; item-align: center;">

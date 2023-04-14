@@ -1,0 +1,81 @@
+/* Centrer l'image */
+.photo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Police de caractère par défaut */
+body {
+    font-family: 'visby-regular', sans-serif;
+    background-color: #f5e6c4;
+}
+
+/* Titre principal */
+h1 {
+    background-color: #FFAE42;
+    color: #050529;
+    font-family: 'aswatama', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem 30%;
+    border-radius: 5px;
+    box-shadow: 0 0 0 5px #ff5757;
+}
+
+/* Formulaire de contact */
+form {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #050529;
+    font-family: 'VisbyBold', sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+input,
+textarea {
+    border: none;
+    background-color: #f5e6c4;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: #050529;
+    font-family: 'VisbyBold', sans-serif;
+    box-shadow: 0 0 0 5px #ff5757;
+}
+
+input[type="submit"] {
+    background-color: #FFAE42;
+    color: #050529;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-family: 'VisbyBold', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff8d00;
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 768px) {
+    h1 {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    form {
+        max-width: 100%;
+    }
+}

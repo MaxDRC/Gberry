@@ -1,0 +1,29 @@
+/* Titre principal */
+h1 {
+    background-color: #FFAE42;
+    color: #050529;
+    font-family: 'aswatama', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem 30%;
+    border-radius: 5px;
+    box-shadow: 0 0 0 5px #ff5757;
+}
+.gallery {
+    display: grid;
+    grid-template:             
+                "a a " 40px 
+                "b c " 30px 
+                "b c " 30px / auto auto;
+    grid-gap: 10px;
+}
+#grandeimg{
+    grid-area: a;
+}
+.gallery img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
