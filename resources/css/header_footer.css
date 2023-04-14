@@ -1,29 +1,24 @@
-/* Réinitialisation des styles par défaut */
 
-*{
+/* Réinitialisation des styles par défaut */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 /* Styles pour l'en-tête */
-header {
-    background-color: #f5e6c4;
-    font-family: 'visby-regular', sans-serif;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-header .connect {
+.connect {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: #f5e6c4;
-    border: 2px solid #ff5757;
+    border: 2px solid #38b6ff;
     border-radius: 15px;
     margin: 10px;
     padding: 5px;
 }
-header .connect a {
+
+.connect a {
     color: #38b6ff;
     text-decoration: none;
     font-size: 15px;
@@ -31,26 +26,36 @@ header .connect a {
     margin: 5px;
     padding: 5px;
 }
-header .connect a img {
+
+.connect a img {
     width: 30px;
     height: 30px;
     border: none;
 }
-header nav {
+
+/* Styles pour le menu normal */
+.menu-normal {
+    background-color: #f5e6c4;
+    font-family: 'visby-regular', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 5px;
+    color: #ff5757;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    /* Par défaut, montrez le menu normal */
 }
+
 header .logo img {
     width: 300px;
     align-items: center;
 }
-header nav ul {
-    display: flex;
-    list-style: none;
-}
-header nav ul li a {
+
+header nav a {
     color: #ff5757;
     text-decoration: none;
     padding: 5px;
@@ -58,11 +63,20 @@ header nav ul li a {
     font-size: 20px;
     position: relative;
 }
-header nav ul li a:hover {
-    color: #38b6ff;
-    border: 3px solid #ff5757;
-    border-radius: 5px;
+
+
+/* Styles pour le menu burger */
+.menu-burger {
+    display: none;
+    /* Par défaut, cachez le menu burger */
 }
+
+
+.menu-mobile {
+    display: none;
+    /* Par défaut, cachez le menu mobile */
+    
+} 
 /* Media queries pour les écrans de petite taille */
 @media (min-width: 300px) and (max-width: 1140px) {
     header nav {
@@ -75,7 +89,7 @@ header nav ul li a:hover {
         width: 150px;
         margin: 10px;
     }
-    header nav ul li a {
+    header nav a {
         margin: 5px;
         padding: 5px;
         font-size: 16px;
@@ -120,53 +134,105 @@ footer {
     font-size: 20px;
     font-weight: bold;
 }
-footer nav {
+.menu-normal-footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 5px;
 }
+
+.menu-mobile-footer {
+    display: none;
+    /* Par défaut, cachez le menu mobile */
+    
+} 
 .logo {
     width: 300px;
     border-radius: 20px;
     margin: 0 auto; 
     align-items: center;
 }
-footer nav ul li {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 5px;
-}
-footer .container {
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
-}
-footer .container nav ul li a {
-    color: #38b6ff;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 5px;
-}
-footer nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-}
-footer .container nav ul li a:hover {
-    color: #ff5757;
-}
-footer .container ul li a {
-    align-items: center;
-    padding: 5px;
-    list-style: none;
-}
-nav ul li {
-    font-weight: bold;
-    text-decoration: none;
-    list-style: none;
+
+@media (max-width: 768px) {
+    /* Cachez le menu normal sur les écrans plus petits */
+    .menu-normal {
+        display: none;
+    }
+
+    /* Montrez le menu burger sur les écrans plus petits */
+    .menu-burger {
+        display: flex;
+        font-size: 20px;
+        background-color: #f5e6c4;
+        border: 2px solid #38b6ff;
+        border-radius: 15px;
+        padding: 5px;
+        margin: 10px;
+        cursor: pointer;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .btn-menu-burger  
+    {
+        border: none;
+        background: none;
+    }
+    .connect{
+        display: inline;
+
+    }
+    /* Montrez le menu mobile sur les écrans plus petits */
+    .menu-mobile.active{
+        display: block;
+        text-align: center;
+        padding: 5px;
+    }
+    
+    /* Montrez le menu mobile lorsque le menu burger est cliqué */
+    .menu-burger:checked ~ .menu-mobile {
+        display: block;
+    }
+
+    /* Styles pour les liens dans le menu mobile */
+    .menu-mobile a {
+        display: block;
+        color: #ff5757;
+        font-size: 20px;
+        text-decoration: none;
+        border-bottom: 2px solid #38b6ff;
+    }
+    .menu-mobile a:hover {
+        color: #38b6ff;
+    }
+    /* Styles pour le dernier lien dans le menu mobile */
+    .menu-mobile a:last-of-type {
+        border-bottom: none;
+    }
+
+    /* Styles pour le menu burger footer */
+    .menu-normal-footer{
+        display: none;
+    }
+
+
+    /* Styles pour les liens dans le menu mobile */
+    .menu-mobile-footer a:hover{
+        color: #ff5757;
+    }
+    .menu-mobile-footer a {
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        margin: 10px;
+        
+    }
+    /* Styles pour le dernier lien dans le menu mobile */
+    .menu-mobile-footer a:last-of-type {
+        border-bottom: none;
+    }
+    .menu-mobile-footer{
+        display: flex;
+        position: absolute;
+        margin-left: 15%;
+    }
 }

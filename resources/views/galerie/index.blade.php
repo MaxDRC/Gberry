@@ -1,16 +1,26 @@
 @extends('layouts.layouthf')
 
 @section('content')
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+<head>
+     
+    <title>Galerie Photos</title>
+</head>
+     
+@vite(['resources/css/galerie.css', 'resources/js/app.js'])
+
  <h1>Galerie Photos</h1>
- <img class="photo" src="img/berrysunday.jpg" alt="berrysunday" style="width: 75%; heigth: 100%; item-align: center;">
- 
-    <h2>Dès l'ouverture de la saison des festivals, GoodBerry entre en scène et vous propose de faire bouger vos dimanches !!</h2> 
-        <h3>Au programme : </h3>
-        <p>
-             ¤ Dj set (house, techno, electro, etc...) avec une ambiance festive et conviviale pour passer un bon moment entre amis !
-        </p>
-<img class="photo" src="img/berrysunday.jpg" alt="berrysunday" style="width: 75%; heigth: 100%; item-align: center;">
+     
+     <div class="gallery">
+         <img id="grandeimg" src="img/gallery/photo1.jpg" alt="photo 1">
+         <img src="img/gallery/photo2.jpg" alt="photo 2">
+         <img src="img/gallery/photo3.jpg" alt="photo 3">
+     </div>
+     <!-- <div class="gallery2">
+        <img src="img/gallery/photo4.jpg" alt="photo 4">
+         <img src="img/gallery/photo5.jpg" alt="photo 5">
+         <img src="img/gallery/photo6.jpg" alt="photo 6">
+         <img src="img/gallery/photo7.jpg" alt="photo 7">
+     </div> -->
 @endsection
 
 

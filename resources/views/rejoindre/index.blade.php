@@ -1,8 +1,9 @@
 @extends('layouts.layouthf')
 
 @section('content')
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+@vite(['resources/css/rejoindre.css', 'resources/js/app.js'])
     <h1>Rejoignez-nous</h1>
+    <img class="photo" src="img/benevoles.png" alt="benevoles" style="width: 75%; heigth: 100%; item-align: center;">
     <form>
         <label for="fname">Nom</label>
         <input type="text" id="fname" name="firstname" placeholder="Votre nom..">
