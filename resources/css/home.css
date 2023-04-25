@@ -7,19 +7,20 @@
 
 /* Police de caractère par défaut */
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #F9D8A7;
+    font-family: 'visby-regular', sans-serif;
+    background-color: #f5e6c4;
 }
 
 /* Titre principal */
 h1 {
     background-color: #FF6B6B;
     color: #FFFFFF;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'aswatama', sans-serif;
+
     text-align: center;
-    font-size: 4rem;
-    margin: 5rem auto 3rem;
-    padding: 2rem;
+    font-size: 6rem;
+    margin: 8rem 12rem 8rem;
+    padding: 0.5rem;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(255, 107, 107, 0.5);
 }
@@ -28,17 +29,16 @@ h1 {
 h2,
 h3 {
     color: #333333;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'visby-regular', sans-serif;
     font-size: 2rem;
     text-align: center;
     margin-top: 2rem;
 }
-
 /* Paragraphe */
 p {
     background-color: #FFFFFF;
     color: #333333;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'visby-regular', sans-serif;
     font-size: 1.5rem;
     text-align: center;
     margin: 3rem auto;
@@ -137,6 +137,7 @@ p {
 /* Responsive */
 @media (max-width: 768px) {
     h1 {
+        font-family: 'visby-regular', sans-serif;
         font-size: 3rem;
         margin: 3rem auto 2rem;
         padding: 1rem;

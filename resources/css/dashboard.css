@@ -1,0 +1,107 @@
+.main {
+    font-family: 'visby-regular', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-left: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.cotisation {
+    font-family: 'visby-regular', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #f5e6c4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.infoperso {
+    font-family: 'visby-regular', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #f5e6c4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+/* Style pour les titres */
+h1,
+h2 {
+    font-family: 'visby-regular', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Style pour les boutons */
+.button {
+    font-family: 'visby-regular', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #1b9dc2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: #0f6f8b;
+}
+
+.button:active {
+    transform: translateY(2px);
+}
+
+/* Style pour les tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table td,
+table th {
+    padding: 10px;
+    text-align: left;
+    font-family: 'visby-regular', sans-serif;
+}
+
+table th {
+    background-color: #1b9dc2;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #d9d9d9;
+}

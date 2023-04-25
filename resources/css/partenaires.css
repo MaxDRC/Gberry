@@ -1,10 +1,16 @@
 /* Styles pour la section Partenaires */
-
+body {
+    background-color: #f5e6c4;
+}
 h1 {
-    font-size: 3rem;
-    color: #f66d9b;
+    background-color: #FFAE42;
+    color: #050529;
+    font-family: 'aswatama', sans-serif;
     text-align: center;
-    margin-top: 2rem;
+    font-size: 3rem;
+    margin: 3rem 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 5px #ff5757;
 }
 
 .photo {
@@ -20,14 +26,14 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    color: #333;
+    color: #050529;
     text-align: center;
     margin-top: 2rem;
 }
 
 p {
     font-size: 1.2rem;
-    color: #666;
+    color: #050529;
     text-align: center;
     margin-top: 1rem;
 }
@@ -43,24 +49,27 @@ form {
 
 label {
     font-size: 1.2rem;
-    color: #666;
+    font-family: 'visby-regular', sans-serif;
+    color: #38b6ff;
     margin-top: 1rem;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
+   
     padding: 0.5rem;
     margin-top: 0.5rem;
-    border: 2px solid #f66d9b;
+    border: 2px solid #ff5757;
     border-radius: 0.5rem;
     width: 100%;
     font-size: 1.2rem;
 }
 
 input[type="submit"] {
-    background-color: #f66d9b;
-    color: #fff;
+    background-color: #38b6ff;
+    color: #ff5757;
+    font-family: 'visby-regular', sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
@@ -74,6 +83,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #f4507f;
+    color: #38b6ff;
 }
 
 /* Caroussel Partenaires */
@@ -98,6 +108,9 @@ input[type="submit"]:hover {
 
 .carousel-item.active {
     display: block;
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
 }
 
 .carousel-controls {

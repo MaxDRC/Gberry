@@ -1,18 +1,28 @@
-
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Tableau de bord') }}
-        </h2>
-    </x-slot>
-
-    <div class="bg-purple-200 py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-pink-400 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("Vous etes connecté ! ") }}
-                </div>
-            </div>
+    <div class="flex flex-col ">
+        <div class="bg-amber-200 rounded-lg shadow-lg px-4 py-6 md:w-2/5 mx-4">
+            <h3 class="text-xl font-bold mb-4">{{ __('Votre profil') }}</h3>
+            <p class="text-gray-600">{{ __('Nom ') }} </p>
+            <p class="text-gray-600">{{ __('Prénom : ') }} </p>
+            <p class="text-gray-600">{{ __('Email : ') }} </p>
         </div>
     </div>
+    
+    <div class="flex flex-col ">
+        <div class="bg-amber-200 rounded-lg shadow-lg px-4 py-6 md:w-2/5 mx-4">
+            <h3 class="text-xl font-bold mb-4">{{ __('Votre cotisation adhérents') }}</h3>
+            <p class="text-gray-600">{{ __('Statut cotisation : ') }} </p>
+            <p class="text-gray-600">{{ __('Date de fin de cotisation : ') }}</p>
+        </div>
+    </div>
+
+    <div class="flex flex-col ">
+        <div class="bg-amber-200 rounded-lg shadow-lg px-4 py-6 md:w-2/5 mx-4">
+            <h3 class="text-xl font-bold mb-4">{{ __('Gestion évènements') }}</h3>
+            <p class="text-gray-600">{{ __('Disponibilité : ') }} </p>
+            <p class="text-gray-600">{{ __('Accès calendrier évènements : ') }}</p>
+        </div>
+    </div>
+
+    
 </x-app-layout>

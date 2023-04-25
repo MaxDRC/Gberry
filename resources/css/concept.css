@@ -11,7 +11,7 @@ body {
 }
 /* Titre principal */
 h1 {
-    background-color: #FFAE42;
+    background-color: #f5e6c4;
     color: #050529;
     font-family: 'aswatama', sans-serif;
     text-align: center;
@@ -28,7 +28,7 @@ h1 {
 h2,
 h3 {
     color: #050529;
-    font-family: 'aswatama', sans-serif;
+    font-family: 'visby-regular', sans-serif;
     font-size: 3rem;
     text-align: center;
     margin-top: 2rem;
@@ -36,9 +36,9 @@ h3 {
 
 /* Paragraphe */
 p {
-    background-color: #FFAE42;
+    background-color: #f5e6c4;
     color: #050529;
-    font-family: 'VisbyBold', sans-serif;
+    font-family: 'visby-regular', sans-serif;
     font-style: normal;
     font-size: 1.5rem;
     text-align: center;

@@ -7,6 +7,21 @@
 }
 
 /* Styles pour l'en-tête */
+
+header .logo img {
+    width: 300px;
+    align-items: center;
+}
+
+header nav a {
+    color: #ff5757;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+    position: relative;
+}
+
+/* Styles pour l'espace connexion */
 .connect {
     display: flex;
     justify-content: space-evenly;
@@ -21,7 +36,6 @@
 .connect a {
     color: #38b6ff;
     text-decoration: none;
-    font-size: 15px;
     position: relative;
     margin: 5px;
     padding: 5px;
@@ -45,25 +59,10 @@
     padding: 5px;
     color: #ff5757;
     text-decoration: none;
-    font-size: 20px;
+   
     position: relative;
     /* Par défaut, montrez le menu normal */
 }
-
-header .logo img {
-    width: 300px;
-    align-items: center;
-}
-
-header nav a {
-    color: #ff5757;
-    text-decoration: none;
-    padding: 5px;
-    margin: 5px;
-    font-size: 20px;
-    position: relative;
-}
-
 
 /* Styles pour le menu burger */
 .menu-burger {
@@ -77,43 +76,7 @@ header nav a {
     /* Par défaut, cachez le menu mobile */
     
 } 
-/* Media queries pour les écrans de petite taille */
-@media (min-width: 300px) and (max-width: 1140px) {
-    header nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding:2rem
-
-    }
-    header .logo img {
-        width: 150px;
-        margin: 10px;
-    }
-    header nav a {
-        margin: 5px;
-        padding: 5px;
-        font-size: 16px;
-    }
-}
-@media (min-width: 300px) and (max-width: 640px)
-{
-    footer .container {
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        padding:5px;
-
-    }
-    footer .logo img {
-        width: 200px;
-    }
-    footer nav ul li a {
-        padding: 10px;
-        font-size: 16px;
-    }
-}
     
-
 /* Styles pour le contenu */
 main {
     padding: 1rem;
@@ -128,7 +91,7 @@ p {
 
 /* Styles pour le pied de page */
 footer {
-    background-color:  #000000;
+    background-color:  #2e2c2c;
     font-family: 'visby-regular', sans-serif;
     font-size: 1.2em;
     font-size: 20px;
