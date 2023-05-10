@@ -10,7 +10,7 @@
         
         <!-- Scripts -->
         
-        @vite(['resources/css/layoutdashboard.css', 'resources/js/app.js'])
+        @vite(['resources/css/layoutdashadherents.css', 'resources/js/app.js'])
 
     </head>
 

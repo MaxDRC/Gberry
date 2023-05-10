@@ -1,37 +1,41 @@
-// const carouselItems = document.querySelectorAll('.carousel-item');
-// const carouselControls = document.querySelectorAll(
-//     '.carousel-control-prev, .carousel-control-next'
-// );
-// let currentIndex = 0;
-
-// function showItem(index) {
-//     carouselItems.forEach(
-//         item => item.classList.toggle('active', item === carouselItems[index])
-//     );
-//     carouselControls.forEach(
-//         control => control.classList.toggle('active', control.dataset.bsSlide === (
-//             index === 0
-//                 ? 'prev'
-//                 : 'next'
-//         ))
-//     );
-//     currentIndex = index;
-// }
-
-// function changeItem(index) {
-//     return function () {
-//         showItem(index);
-//     }
-// }
-const carouselItems = document.querySelectorAll('.carousel-item');
-const carouselControls = document.querySelectorAll(
-    '.carousel-control-prev',
-    '.carousel-control-next'
-);
+const carouselItems = document.querySelectorAll('#new-carousel > img');
+const carouselGauche = document.querySelector('#new-carousel__ctrl__gch');
+const carouselDroit = document.querySelector('#new-carousel__ctrl__drt');
 
 let currentIndex = 0;
 
+
+// Show the first item initially
+showItem(0);
+
+    carouselGauche.addEventListener('click', () => {
+        if(currentIndex > 0){
+            currentIndex = currentIndex - 1;
+            showItem(currentIndex);
+        }
+        else{
+            currentIndex = carouselItems.length - 1;
+            showItem(currentIndex);
+        }
+    });
+    carouselDroit.addEventListener('click', () => {
+        if((currentIndex < carouselItems.length - 1)){
+            currentIndex = currentIndex + 1;
+            showItem(currentIndex);
+        }
+        else{
+            currentIndex = 0;
+            showItem(currentIndex);
+        }
+    });
+
+
+
+setInterval(() => showItem((currentIndex + 1) % carouselItems.length), 10000);
+
+showItem(0);
 function showItem(index) {
+    console.log(index);
     // Loop through all carousel items
     carouselItems.forEach((item, i) => {
         // If the current index matches the current item, set it to active
@@ -46,25 +50,13 @@ function showItem(index) {
         }
     });
 
-    // Loop through all carousel controls
-    carouselControls.forEach((control, i) => {
-        // If the current index matches the current control, set it to active
-        if (i === index) {
-            control
-                .classList
-                .add('active');
-        } else {
-            control
-                .classList
-                .remove('active');
-        }
-    });
 
     currentIndex = index;
 }
 
 function changeItem(index) {
     return function () {
+        console.log(index);
         // If we're at the beginning of the carousel and trying to go back, go to the
         // last item
         if (index < 0) {
@@ -79,28 +71,3 @@ function changeItem(index) {
         }
     };
 }
-
-// Add click event listeners to carousel controls
-carouselControls.forEach((control, index) => {
-    control.addEventListener('click', changeItem(currentIndex + (
-        index === 0
-            ? -1
-            : 1
-    )));
-});
-
-// Start the carousel
-setInterval(() => {
-    const nextIndex = (currentIndex + 1) % carouselItems.length;
-    showItem(nextIndex);
-}, 5000);
-
-// Show the first item initially
-showItem(0);
-carouselControls.forEach(
-    (control, index) => control.addEventListener('click', changeItem(index))
-);
-
-setInterval(() => showItem((currentIndex + 1) % carouselItems.length), 5000);
-
-showItem(0);
