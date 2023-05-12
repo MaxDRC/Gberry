@@ -12,11 +12,10 @@
             Voici l'aftermovie de notre Berry Sunday à la cathédrale de Bourges
         </h2>
     </div>
-    <video id="myVideo" controls  muted>
+    <video id="myVideo"  muted>
         <source src="videos/GB.mp4" type="video/mp4">
     </video>
 </div>
-
 <h3>Au programme : </h3>
 <p>
      ¤ Dj set (house, techno, electro, etc...) ¤
