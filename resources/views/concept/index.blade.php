@@ -56,7 +56,9 @@
     <div class="grid-container">
       <div>
         <div class="video">
-          <video src="videos/GB.webm" loop="loop" controls muted playsinline="playsinline" poster="../img/vignettes.jpg"></video>
+          <video>
+            <source src="https://www.youtube.com/embed/eJXQuyPowoY" type="video/mp4">
+          </video>
         </div>
       </div>
       <div>
