@@ -1,63 +1,61 @@
 @extends('layouts.layouthf')
 
 @section('content')
-@vite(['resources/css/partenaires.css', 'resources/js/app.js', 'resources/js/caroussel.js'])
-    <h1>Partenaires</h1>
-    <div class="carousel relative">
-      <div class="carousel-inner">
-            <div class="carousel-item absolute inset-0 bg-gray-100">
-              <img src="img/part/idkub.jpg" class="object-cover object-center w-full h-full" alt="Berry Sunday">
-            </div>
-            <div class="carousel-item absolute inset-0 bg-gray-100">
-              <img src="img/part/madinina1.jpg" class="object-cover object-center w-full h-full" alt="Festival 1">
-            </div>
-            <div class="carousel-item absolute inset-0 bg-gray-100">
-              <img src="img/part/brasbos.jpg" class="object-cover object-center w-full h-full" alt="Festival 2">
-            </div>
-            <div class="carousel-item absolute inset-0 bg-gray-100">
-              <img src="img/part/bourgneuf.jpg" class="object-cover object-center w-full h-full" alt="Festival 3">
-            </div>
-            <div class="carousel-item absolute inset-0 bg-gray-100">
-              <img src="img/part/birdie.jpg" class="object-cover object-center w-full h-full" alt="Festival 3">
-            </div>
-            <div class="carousel-item absolute inset-0 bg-gray-100">
-              <img src="img/part/Arliane.png" class="object-cover object-center w-full h-full" alt="Festival 3">
-            </div>
-            <div class="carousel-item absolute inset-0 bg-gray-100">
-              <img src="img/part/berrycola.jpg" class="object-cover object-center w-full h-full" alt="Festival 3">
-            </div>
-            <div class="carousel-item absolute inset-0 bg-gray-100">
-              <img src="img/part/paco.jpg" class="object-cover object-center w-full h-full" alt="Festival 3">
-            </div>
-            <div class="carousel-item absolute inset-0 bg-gray-100">
-              <img src="img/part/soundb.jpg" class="object-cover object-center w-full h-full" alt="Festival 3">
-            </div>
-      </div>
-      <!-- <div class="carousel-nav absolute inset-y-0 right-0 flex items-center justify-center">
-            <button class="carousel-control carousel-control-prev mr-2">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="carousel-control carousel-control-next">
-              <i class="fas fa-chevron-right"></i>
-            </button>
-      </div> -->
-    </div>
-    <br>
-    <h2>Demande de partenariat</h2>
-    <p>
-        Si vous souhaitez devenir partenaire de GoodBerry, n'hésitez pas à nous contacter via le formulaire ci-dessous.
-    </p>
-    <form>
-        <label for="fname">Nom</label>
-        <input type="text" id="fname" name="firstname" placeholder="Votre nom..">
-        <label for="lname">Prénom</label>
-        <input type="text" id="lname" name="lastname" placeholder="Votre prénom..">
+@vite(['resources/css/partenaires.css', 'resources/js/app.js'])
+<div id="titles">
+  <h1>Partenaires</h1>
+</div>
+<h2>Retrouvez les sites de nos partenaires</h2>
+<div id="logobar">
+  <div class="logos">
+    <a href="https://www.facebook.com/people/Madinina-Cocktails/100054197874867/">
+      <img src="img/part/madinlogo.png" alt="Madinina">
+    </a>
+    <a href="http://idkub.com/">
+      <img src="img/part/IDKUBlogo.png" alt="IDKUB">
+    </a>
+    <a href="https://www.brasserie-bos.fr/">
+      <img src="img/part/brasboslogo.png" alt="Brasserie Bos">
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=100062748132798">
+      <img src="img/part/birdielogo.jpg" alt="Birdie">
+    </a>
+    <a href="https://www.cueillette-de-bourgneuf.fr/">
+      <img src="img/part/logo-bourgneuf.png" alt="Cueuillette Bourgneuf">
+    </a>
+    <a href="https://www.arliane-bourges.fr/">
+      <img src="img/part/arlianelogo.png" alt="Arliane">
+    </a>
+    <a href="https://www.facebook.com/Pacoprintfr/">
+      <img src="img/part/pacologo.png" alt="Paco Print">
+    </a>
+    <a href="https://www.soundb.fr/">
+      <img src="img/part/logosoundb.png" alt="Sound B">
+    </a>
+  </div>
+</div>
+
+<div class="main_form">
+  <h2>Demande de partenariat</h2>
+</div>
+<div class="container_form">
+  <div class="content_form">
+    <p>Si vous souhaitez devenir partenaire de GoodBerry, n'hésitez pas à nous contacter via le formulaire ci-dessous.</p>
+    <div id="form"class="content_form">
+      <form>
+        <label for="fname">Entreprise</label>
+        <input type="text" id="fname" name="firstname" placeholder="Qui-êtes-vous..? " class="form-input">
+        <label for="lname">Nom</label>
+        <input type="text" id="lname" name="lastname" placeholder="Nom du contact.." class="form-input">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Votre email..">
+        <input type="email" id="email" name="email" placeholder="Votre email.." class="form-input">
         <label for="subject">Sujet</label>
-        <textarea id="subject" name="subject" placeholder="Votre message.." style="height:200px"></textarea>
-        <input type="submit" value="Envoyer">
-    </form>
+        <textarea id="subject" name="subject" placeholder="Je veux devenir partenaire.." style="height:200px" class="form-input"></textarea>
+        <input type="submit" value="Envoyer" class="submit-button">
+      </form>
+    </div>
+  </div>
+</div>
     
     
 @endsection

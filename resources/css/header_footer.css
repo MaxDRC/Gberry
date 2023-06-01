@@ -18,11 +18,11 @@
 }
 
 #entete-site nav a {
+    display: grid;
     color: #ff5757;
     text-decoration: none;
     padding: 2px;
-    position: relative;
-    justify-content: space-between;
+    
 }
 #entete-site nav a:hover {
     color: #38b6ff;
@@ -36,6 +36,7 @@
     justify-content: space-between;
     border: 2px solid #38b6ff;
     border-radius: 15px;  
+    padding: 0 1em;
 }
 
 

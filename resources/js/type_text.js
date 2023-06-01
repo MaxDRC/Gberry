@@ -1,6 +1,6 @@
 // JavaScript
 const typedText = document.getElementById("typed-text");
-const textToType = "GoodBerry kézako ?";
+const textToType = "GoodBerry qu'est-ce que c'est ?";
 let index = 0;
 
 function typeText() {
