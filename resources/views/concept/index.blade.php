@@ -56,7 +56,7 @@
     <div class="grid-container">
       <div>
         <div class="video">
-          <video src="videos/GB.mp4" loop="loop" controls muted playsinline="playsinline" poster="../img/vignettes.jpg"></video>
+          <video src="videos/GB.webm" loop="loop" controls muted playsinline="playsinline" poster="../img/vignettes.jpg"></video>
         </div>
       </div>
       <div>
