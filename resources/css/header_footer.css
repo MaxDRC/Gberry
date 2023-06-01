@@ -7,63 +7,60 @@
 }
 
 /* Styles pour l'en-tête */
-.connect {
-    display: flex;
-    justify-content: space-evenly;
+#entete-site{
+    position: relative;
+    z-index: 99;
+    margin-left: 10px;
+}
+#entete-site .logo img {
+    width: 100px;
     align-items: center;
-    background-color: #f5e6c4;
-    border: 2px solid #38b6ff;
-    border-radius: 15px;
-    margin: 10px;
-    padding: 5px;
 }
 
-.connect a {
+#entete-site nav a {
+    display: grid;
+    color: #ff5757;
+    text-decoration: none;
+    padding: 2px;
+    
+}
+#entete-site nav a:hover {
     color: #38b6ff;
     text-decoration: none;
-    font-size: 15px;
-    position: relative;
-    margin: 5px;
-    padding: 5px;
 }
 
-.connect a img {
-    width: 30px;
-    height: 30px;
-    border: none;
+/* Styles pour l'espace connexion */
+.connect {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #38b6ff;
+    border-radius: 15px;  
+    padding: 0 1em;
 }
+
 
 /* Styles pour le menu normal */
 .menu-normal {
-    background-color: #f5e6c4;
+    
     font-family: 'visby-regular', sans-serif;
     font-size: 1.2em;
     font-weight: bold;
     display: flex;
+    grid-area: a;
     justify-content: space-evenly;
     align-items: center;
     padding: 5px;
     color: #ff5757;
     text-decoration: none;
-    font-size: 20px;
-    position: relative;
+    background-color: hsla(180, 1%, 18%, 0.786);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
     /* Par défaut, montrez le menu normal */
 }
-
-header .logo img {
-    width: 300px;
-    align-items: center;
-}
-
-header nav a {
-    color: #ff5757;
-    text-decoration: none;
-    padding: 5px;
-    margin: 5px;
-    font-size: 20px;
-    position: relative;
-}
-
 
 /* Styles pour le menu burger */
 .menu-burger {
@@ -77,43 +74,7 @@ header nav a {
     /* Par défaut, cachez le menu mobile */
     
 } 
-/* Media queries pour les écrans de petite taille */
-@media (min-width: 300px) and (max-width: 1140px) {
-    header nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding:2rem
-
-    }
-    header .logo img {
-        width: 150px;
-        margin: 10px;
-    }
-    header nav a {
-        margin: 5px;
-        padding: 5px;
-        font-size: 16px;
-    }
-}
-@media (min-width: 300px) and (max-width: 640px)
-{
-    footer .container {
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        padding:5px;
-
-    }
-    footer .logo img {
-        width: 200px;
-    }
-    footer nav ul li a {
-        padding: 10px;
-        font-size: 16px;
-    }
-}
     
-
 /* Styles pour le contenu */
 main {
     padding: 1rem;
@@ -128,7 +89,7 @@ p {
 
 /* Styles pour le pied de page */
 footer {
-    background-color:  #000000;
+    background-color:  #2e2c2c;
     font-family: 'visby-regular', sans-serif;
     font-size: 1.2em;
     font-size: 20px;
@@ -136,8 +97,16 @@ footer {
 }
 .menu-normal-footer {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.menu-normal-footer a {
+    color: #ff5757;
+    text-decoration: none;
+    position: relative;
+    margin: 5px;
     padding: 5px;
 }
 
@@ -153,7 +122,7 @@ footer {
     align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 930px) {
     /* Cachez le menu normal sur les écrans plus petits */
     .menu-normal {
         display: none;
@@ -162,15 +131,21 @@ footer {
     /* Montrez le menu burger sur les écrans plus petits */
     .menu-burger {
         display: flex;
-        font-size: 20px;
-        background-color: #f5e6c4;
-        border: 2px solid #38b6ff;
+        background-color: hsla(60, 1%, 22%, 0.595);
+        border: 2px solid #ff6d38;
         border-radius: 15px;
-        padding: 5px;
-        margin: 10px;
         cursor: pointer;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 2;
+
+    }
+    .menu-burger:hover{
+        background-color: hsla(60, 14%, 99%, 0.795);
     }
     .btn-menu-burger  
     {
@@ -178,14 +153,33 @@ footer {
         background: none;
     }
     .connect{
-        display: inline;
-
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
+    .connect a {
+        text-decoration: none;
+        position: relative;
+        margin: 5px;
+        padding: 5px;
+    }
+    
     /* Montrez le menu mobile sur les écrans plus petits */
     .menu-mobile.active{
+        font-family: 'visby-regular', sans-serif;
+        font-size: 1.2em;
+        font-weight: bold;
         display: block;
         text-align: center;
         padding: 5px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 10%;
+        background-color: hsla(0, 0%, 14%, 0.941);
+        border: 2px solid #ff6d38;
+        border-radius: 15px;
     }
     
     /* Montrez le menu mobile lorsque le menu burger est cliqué */
@@ -202,7 +196,9 @@ footer {
         border-bottom: 2px solid #38b6ff;
     }
     .menu-mobile a:hover {
+        background-color: hsla(0, 14%, 95%, 0.941);
         color: #38b6ff;
+        border-bottom: 2px solid #ff5757;
     }
     /* Styles pour le dernier lien dans le menu mobile */
     .menu-mobile a:last-of-type {
@@ -214,25 +210,11 @@ footer {
         display: none;
     }
 
-
-    /* Styles pour les liens dans le menu mobile */
-    .menu-mobile-footer a:hover{
-        color: #ff5757;
-    }
-    .menu-mobile-footer a {
-        display: flex;
-        align-items: center;
-        justify-content:space-between;
-        margin: 10px;
-        
-    }
-    /* Styles pour le dernier lien dans le menu mobile */
-    .menu-mobile-footer a:last-of-type {
-        border-bottom: none;
-    }
     .menu-mobile-footer{
         display: flex;
-        position: absolute;
-        margin-left: 15%;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: hsla(0, 2%, 10%, 0.678);
+        padding: 5px;
     }
 }
