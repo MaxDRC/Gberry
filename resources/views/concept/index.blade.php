@@ -56,9 +56,7 @@
     <div class="grid-container">
       <div>
         <div class="video">
-          <video>
-            <source src="https://www.youtube.com/embed/eJXQuyPowoY" type="video/mp4">
-          </video>
+          <video src="vidéo/GB.mp4"  loop="loop" playsinline="playsinline" controls  muted poster="img/vignettes.jpg"></video>
         </div>
       </div>
       <div>
